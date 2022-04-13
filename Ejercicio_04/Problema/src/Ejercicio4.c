@@ -32,26 +32,29 @@ void Error1()
 	int i;
 	char cadena[10];
 	char cadena2[10];
-	for( i=1;i<=10;i++)
+	for( i=0;i<10;i++)
 	{
 		switch(i)
 		{
 			case 1:
 				cadena[i]='A';
+				break;
 			case 2:
 				cadena[i]='B';
+				break;
 			case 3:
 				cadena[i]='C';
+				break;
 			case 4:
 				cadena[i]="D";
+				break;
 			default:
 				cadena[i]="-";
-
 		}
 	}
-	cadena[9]='a';
+	cadena[9]='\0';
 	printf("cadena 1: %s",cadena);
-	if(strcmp(cadena2,cadena))
+	if(strcmp(cadena2,cadena) == 0)
 		printf("Genere 2 cadenas iguales!\n");
 
 
